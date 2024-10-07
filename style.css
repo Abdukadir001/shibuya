@@ -68,7 +68,7 @@ body {
 
     transition: 0.8s;
 
-    &:active {
+    &.active {
       opacity: 1;
       visibility: visible;
     }
@@ -80,6 +80,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #251607;
+    cursor: pointer;
 
     @media (max-width: 800px) {
       color: white;
@@ -108,6 +109,8 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 20px;
+    text-align: center;
+
 
     @media (max-width: 480px) {
       padding: 20px 0;
@@ -127,5 +130,97 @@ body {
         display: none;
       }
     }
+  }
+}
+
+
+
+.swiper-slide{
+  img{
+    width: 100%;
+  }
+}
+
+
+.album{
+  .container{
+    max-width: 1900px;
+     
+  }
+}
+
+.meet__wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr ;
+  gap: 50px;
+
+
+  @media (max-width:800px) {
+    /* grid-template-columns: 1fr; */
+      display: flex;
+      flex-direction: column-reverse;
+
+  }
+
+  img{
+    width: 100%;
+  }
+
+
+  p{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+}
+
+
+
+.meet__right{
+  h2{
+    /* font-size: 170px; */
+    font-size: clamp(3.25rem, 0.792rem + 9.83vw, 10.625rem);
+    text-transform: uppercase;
+    text-align: right;
+
+    @media (max-width:800px) {
+      text-align: center;
+    }
+  }
+  p{
+    text-align: right;
+    max-width: 800px;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 73.5px;
+
+    @media (max-width:800px) {
+      text-align: center;
+      margin-top: 30px;
+
+    }
+  }
+
+  img{
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
+.china-1{
+  @media (max-width:880px) {
+    display: none;
+  }
+}
+.china-2{
+  display: none;
+
+  @media (max-width:800px) {
+    display: block;
+    width: 60%;
+    margin: 30px auto;
   }
 }
