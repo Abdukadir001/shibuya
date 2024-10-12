@@ -3,16 +3,21 @@
   padding: 0;
   margin: 0;
 }
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 body {
   background-image: url(./img/bg-1.png);
   background-position: center;
   background-size: cover;
+
+  color: #251607;
 }
+
 .header {
   padding: 52px 0 0;
 
@@ -29,6 +34,7 @@ body {
   align-items: center;
   gap: 20px;
 }
+
 .logo,
 .burger {
   display: none;
@@ -38,6 +44,7 @@ body {
     z-index: 11;
   }
 }
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -90,19 +97,22 @@ body {
 
 .hero__wrapper {
   justify-content: center;
+
   h1 {
     /* font-size: 440px; */
     line-height: 1;
     font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
 
-    
+
     @media (max-width: 480px) {
       padding: 20px 0 0;
     }
   }
+
   img {
     width: 100%;
   }
+
   p {
     /* font-size: 22px; */
     font-size: clamp(1.125rem, 1.044rem + 0.33vw, 1.375rem);
@@ -126,6 +136,7 @@ body {
 
     @media (max-width: 480px) {
       justify-content: center;
+
       p:first-child {
         display: none;
       }
@@ -135,92 +146,296 @@ body {
 
 
 
-.swiper-slide{
-  img{
+.swiper-slide {
+  img {
     width: 100%;
   }
 }
 
 
-.album{
-  .container{
+.album {
+  .container {
     max-width: 1900px;
-     
+
   }
 }
 
-.meet__wrapper{
+.meet__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.5fr ;
+  grid-template-columns: 1fr 1.7fr;
   gap: 50px;
 
+  text-transform: uppercase;
 
   @media (max-width:800px) {
     /* grid-template-columns: 1fr; */
-      display: flex;
-      flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column-reverse;
 
   }
 
-  img{
+  img {
     width: 100%;
   }
 
 
-  p{
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: 500;
+  p {
+    /* font-size: 25px; */
+    font-size: clamp(1.125rem, -1.044rem + 0.33vw, 1.375rem);
+    font-weight: 600;
+
+
+  }
+
+  h2 {
+
+    /* font-size: 180px; */
+    font-size: clamp(2.5rem, -0.32rem + 11.57vw, 11.25rem);
+
+
   }
 
 }
 
 
-
-.meet__right{
-  h2{
-    /* font-size: 170px; */
-    font-size: clamp(3.25rem, 0.792rem + 9.83vw, 10.625rem);
-    text-transform: uppercase;
-    text-align: right;
-
-    @media (max-width:800px) {
-      text-align: center;
-    }
-  }
-  p{
-    text-align: right;
-    max-width: 800px;
-    margin-left: auto;
-    margin-bottom: 30px;
-    margin-top: 73.5px;
-
-    @media (max-width:800px) {
-      text-align: center;
-      margin-top: 30px;
-
-    }
-  }
-
-  img{
-    margin-bottom: 20px;
-  }
-
-
-}
-
-
-.china-1{
-  @media (max-width:880px) {
-    display: none;
-  }
-}
-.china-2{
-  display: none;
+.meet__info {
+  text-align: right;
 
   @media (max-width:800px) {
-    display: block;
-    width: 60%;
-    margin: 30px auto;
+    text-align: center;
+
   }
+
+  p {
+    margin-bottom: 30px;
+
+  }
+}
+
+
+
+.our {
+  padding-top: 20px;
+}
+
+.our__title {
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.our__wrapper {
+  padding: 50px 0;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "card-1 card-2 card-4"
+    "card-1 card-3 card-5";
+
+  @media (max-width:1000px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card-1 card-1"
+      "card-2 card-3"
+      "card-4 card-5";
+  }
+
+  @media (max-width:700px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-5";
+  }
+
+  .card-1 {
+    grid-area: card-1;
+  }
+
+  .card-2 {
+    grid-area: card-2;
+  }
+
+  .card-3 {
+    grid-area: card-3;
+  }
+
+  .card-4 {
+    grid-area: card-4;
+  }
+
+  .card-5 {
+    grid-area: card-5;
+  }
+
+
+}
+
+.our__card {
+  min-height: 350px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+  padding: 20px;
+
+
+
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  text-transform: uppercase;
+
+  @media (max-width:700px) {
+    min-height: 200px;
+    text-align: center;
+  }
+
+  p {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+
+    @media (max-width:700px) {
+      height: auto;
+    }
+
+  }
+
+  h3 {
+    transition: 0.5s;
+
+    @media (max-width:700px) {
+      font-size: 30px;
+    }
+  }
+
+  &:hover {
+    p {
+      height: 30px;
+
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+  }
+
+}
+
+.card-1 {
+  grid-area: cad-1;
+  background-image: url(./img/plans-1.png);
+}
+
+.card-2 {
+  grid-area: card-2;
+  background-image: url(./img/plans-2.png);
+}
+
+.card-3 {
+  grid-area: card-3;
+  background-image: url(./img/plans-3.png);
+}
+
+.card-4 {
+  grid-area: card-4;
+  background-image: url(./img/plans-4.png);
+}
+
+.card-5 {
+  grid-area: card-5;
+  background-image: url(./img/plans-5.png);
+}
+
+.our__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+
+}
+
+
+
+.team {
+  padding: 100px 0;
+}
+
+.team__wrapper {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  gap: 60px;
+}
+
+.team__wrap {
+  h2 {
+    font-size: 180px;
+    text-transform: uppercase;
+  }
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.team__card {
+  border: 3px solid black;
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: end;
+  padding: 25px;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: rgb(241, 211, 131);
+  font-weight: 600;
+  background-size: 120%;
+  transition: 0.6s;
+
+  &:hover {
+    background-size: 160%;
+  }
+
+  &:nth-child(1) {
+    background-image: url(./img/team-1.png);
+  }
+
+  &:nth-child(2) {
+    background-image: url(./img/team-2.png);
+  }
+
+  &:nth-child(3) {
+    background-image: url(./img/plans-3.png);
+  }
+
+  &:nth-child(4) {
+    background-image: url(./img/team-4.png);
+  }
+
+
+}
+
+.team__img {
+  width: 100%;
 }
